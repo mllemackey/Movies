@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SharedModule} from './shared.module';
+import { SharedModule } from './shared.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+      FormsModule
   ],
-  declarations: []
+  declarations: [
+
+  ],
+    exports: [
+        FormsModule
+    ]
 })
 export class SearchModule { }

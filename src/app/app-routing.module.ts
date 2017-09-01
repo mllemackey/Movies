@@ -6,7 +6,11 @@ const appRoutes: Routes = [
     {
         path: '',
         component: MoviesComponent
-    }
+    },
+    {
+        path: 'search/:term',
+        component: MoviesComponent
+    },
 ];
 
 @NgModule({

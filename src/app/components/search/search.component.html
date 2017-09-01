@@ -1,3 +1,9 @@
-<p>
-  search works!
-</p>
+<form class="form-inline" #contactForm="ngForm" (ngSubmit)="search(searchTerm.value); contactForm.reset()">
+    <input type="text" #searchTerm="ngModel" minlength="3" [(ngModel)]="searchTerm.value" name="searchTerm"
+           class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Search">
+
+    <button type="submit" class="btn btn-primary"
+            [disabled]="!contactForm.valid || contactForm.pristine">
+        Search
+    </button>
+</form>
