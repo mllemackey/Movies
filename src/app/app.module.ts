@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import {MovieService} from './shared/services/movie.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { MoviesComponent } from './components/movies/movies.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     SharedModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,23 @@
-<p>
-  movies works!
-</p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Image</th>
+        <th>Duration</th>
+        <th>Release Date</th>
+        <th>Genres</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movieList">
+        <td>{{movie.id}}</td>
+        <td>{{movie.name}}</td>
+        <td>{{movie.director}}</td>
+        <td><img src="{{movie.imageUrl}}" alt=""></td>
+        <td>{{movie.duration}}</td>
+        <td>{{movie.releaseDate}}</td>
+        <td>{{movie.genres}}</td>
+    </tr>
+</table>

@@ -5,8 +5,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 const appRoutes: Routes = [
     {
         path: '',
-        component: MoviesComponent,
-        pathMatch: 'full',
+        component: MoviesComponent
     }
 ];
 
