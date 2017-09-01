@@ -33,6 +33,6 @@ export const movies = [
         imageUrl:   'https://images-na.ssl-images-amazon.com/images/M/MV5BMjY2OTM2Njc3Ml5BMl5BanBnXkFtZTgwNDgzODU3MTI@._V1_UX182_CR0,0,182,268_AL_.jpg',
         duration:   99,
         releaseDate:   '2016-08-23',
-        genres:   ['Sci-Fi']
+        genres:   ['Sci-Fi', 'Thriller']
     },
 ];
