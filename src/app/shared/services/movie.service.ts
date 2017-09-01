@@ -10,7 +10,7 @@ import {element} from 'protractor';
 export class MovieService {
 
     private movieList: Movie[] = [];
-
+    private foundMovie: Movie = {};
 
     constructor() {
     }
@@ -26,17 +26,17 @@ export class MovieService {
         });
     }
 
-    // public searchMovie(serchTerm: string) {
-    //     return this.movieList.filter()
-    // }
+    public searchMovie(term: string) {
+        let found = this.movieList.filter(m => m.name === term);
 
-    // public editContact(contact: Contact){
-    //     return this.http.put('http://localhost:8000/contacts-edit.php', {
-    //             id: contact.id,
-    //             firstName: contact.firstName,
-    //             lastName: contact.lastName,
-    //             email: contact.email
-    //         }
-    //     );
-    // }
+        Object.assign(found[0], this.foundMovie);
+        return new Observable((o: Observer<any>) => {
+            if (found.length) {
+                o.next(this.foundMovie);
+            } else {
+                o.error(found);
+            }
+        });
+    }
+
 }

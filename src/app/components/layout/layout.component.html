@@ -1,7 +1,8 @@
 <nav class="navbar navbar-light bg-primary">
     <a href="/" class="navbar-brand">Movies</a>
+    <app-search #contactForm (onSubmit)="search($event)"></app-search>
 </nav>
-<app-search #contactForm (onSubmit)="search($event)"></app-search>
+
 <div class="container">
     <router-outlet></router-outlet>
 </div>

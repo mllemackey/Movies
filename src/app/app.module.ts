@@ -10,6 +10,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './shared/services/movie.service';
 import { SearchComponent } from './components/search/search.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SearchComponent } from './components/search/search.component';
     AppComponent,
     LayoutComponent,
     MoviesComponent,
-    SearchComponent
+    SearchComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,

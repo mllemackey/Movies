@@ -13,7 +13,6 @@ export class SearchComponent implements OnInit {
 
     search(searchTerm) {
         this.onSubmit.emit(searchTerm);
-
     }
 
   ngOnInit() {
